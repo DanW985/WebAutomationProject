@@ -23,7 +23,7 @@ namespace WebAutomationProject.Report_Manager
                 if(extent == null) 
                 {
                     string filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
-                    string reportPath = @"ReportPath";
+                    string reportPath = @"C:\Users\User\source\repos\WebAutomationProject\Test Reports";
                     htmlReporter = new ExtentHtmlReporter(reportPath);
                     extent = new ExtentReports();
                     extent.AttachReporter(htmlReporter);               

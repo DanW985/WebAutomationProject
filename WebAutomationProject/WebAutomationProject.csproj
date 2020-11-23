@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Page Objects\" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
 
 </Project>

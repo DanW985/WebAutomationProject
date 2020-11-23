@@ -7,12 +7,15 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using AventStack.ExtentReports;
 
 namespace WebAutomationProject.BaseClass
 {
     
     public class Base
     {
+        public static ExtentReports extent;
+        
         public static IWebDriver driver;
 
        public static IWebDriver GetDriver
@@ -59,6 +62,12 @@ namespace WebAutomationProject.BaseClass
         {
             driver.Close();
             driver.Dispose();
+        }
+        [OneTimeTearDown]
+        public void exntentEnd()
+        {
+            extent.Flush();
+            
         }
     }
 
