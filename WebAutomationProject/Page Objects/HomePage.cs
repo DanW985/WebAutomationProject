@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using System;
+using WebAutomationProject.WebDriverExtenstions;
 
 
 
@@ -22,6 +22,13 @@ namespace WebAutomationProject.Page_Objects
         {
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             signInBtn.Click();
+        }
+
+        public void hoverOverWomenClothesTab()
+        {
+            var womenClothesTab = driver.FindElement(By.LinkText("Women"), 10);
+            Actions actions = new Actions(driver);
+            actions.MoveToElement(womenClothesTab).Perform();
         }
 
     }
